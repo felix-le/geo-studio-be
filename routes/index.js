@@ -1,17 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const { statusConstants } = require('../constants/status.constant');
-const userRouter = require('./users');
-const projectRouter = require('./projects');
-const sectionRouter = require('./sections');
+const corporateRouter = require('./corporate');
 
 router.get('/', function (req, res, next) {
   res
     .status(statusConstants.SUCCESS_CODE)
-    .json('Welcome to the MEAN PROJECT API. Lets begin');
+    .json('Welcome to the studio PROJECT API. Lets begin with /api/corporate');
 });
 
-router.use('/users', userRouter);
-router.use('/projects', projectRouter);
-router.use('/sections', sectionRouter);
+router.use('/api/corporate', corporateRouter);
 module.exports = router;
