@@ -15,6 +15,10 @@ let corporateSchema = new mongoose.Schema(
       required: true,
     },
     street: {
+      type: String,
+      required: true,
+    },
+    fleet: {
       type: Number,
       required: true,
     },

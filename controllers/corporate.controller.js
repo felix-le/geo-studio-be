@@ -1,11 +1,11 @@
-const Projects = require('../models/projects.model');
+const Corporate = require('../models/corporate.model');
 const { raiseException, responseServer } = require('../utils/response');
 const { statusConstants } = require('../constants/status.constant');
 
 const corporateCtrl = {
   getCorporates: async (req, res) => {
     try {
-      const allproject = await Projects.find();
+      const allproject = await Corporate.find();
 
       return responseServer(
         res,
